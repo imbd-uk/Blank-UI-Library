@@ -496,17 +496,17 @@ function UI:Create(info)
 					Toggle.UICorner = Instance.new("UICorner", Toggle.Box)
 					Toggle.UICorner.CornerRadius = UDim.new(0.100000001, 0)
 					
-					Toggle.ImageLabel = Instance.new("ImageLabel")
-					Toggle.ImageLabel.Parent = Toggle.Box
-					Toggle.ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-					Toggle.ImageLabel.BackgroundTransparency = 1.000
-					Toggle.ImageLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
-					Toggle.ImageLabel.BorderSizePixel = 0
-					Toggle.ImageLabel.Size = UDim2.new(1, 0, 1, 0)
-					Toggle.ImageLabel.Image = "rbxassetid://76348780980991"
-					Toggle.ImageLabel.ImageColor3 = Color3.fromRGB(20, 20, 20)
-					Toggle.ImageLabel.ScaleType = Enum.ScaleType.Fit
-					Toggle.ImageLabel.Visible = false
+					-- Toggle.ImageLabel = Instance.new("ImageLabel")
+					-- Toggle.ImageLabel.Parent = Toggle.Box
+					-- Toggle.ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+					-- Toggle.ImageLabel.BackgroundTransparency = 1.000
+					-- Toggle.ImageLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+					-- Toggle.ImageLabel.BorderSizePixel = 0
+					-- Toggle.ImageLabel.Size = UDim2.new(1, 0, 1, 0)
+					-- Toggle.ImageLabel.Image = "rbxassetid://76348780980991"
+					-- Toggle.ImageLabel.ImageColor3 = Color3.fromRGB(20, 20, 20)
+					-- Toggle.ImageLabel.ScaleType = Enum.ScaleType.Fit
+					-- Toggle.ImageLabel.Visible = false
 					
 					Toggle.UIStroke = Instance.new("UIStroke", Toggle.Box)
 					Toggle.UIStroke.Color = Color3.fromRGB(131,131, 131)
@@ -530,11 +530,11 @@ function UI:Create(info)
 					
 					if Toggle.boolean then
 						TweenButton(Toggle.Name, {TextColor3 = Color3.fromRGB(255, 255, 255)}, 0.1)
-						TweenButton(Toggle.ImageLabel, {ImageColor3 = Color3.fromRGB(255, 255, 255)}, 0.1)
+						--TweenButton(Toggle.ImageLabel, {ImageColor3 = Color3.fromRGB(255, 255, 255)}, 0.1)
 						TweenButton(Toggle.Box, {BackgroundColor3 = Color3.fromRGB(255, 255, 255)}, 0.1)
 					else
 						TweenButton(Toggle.Name, {TextColor3 = Color3.fromRGB(131, 131, 131)}, 0.1)
-						TweenButton(Toggle.ImageLabel, {ImageColor3 = Color3.fromRGB(131, 131, 131)}, 0.1)
+						--TweenButton(Toggle.ImageLabel, {ImageColor3 = Color3.fromRGB(131, 131, 131)}, 0.1)
 						TweenButton(Toggle.Box, {BackgroundColor3 = Color3.fromRGB(20, 20, 20)}, 0.1)
 					end
 				
@@ -549,7 +549,7 @@ function UI:Create(info)
 					if Toggle.boolean  then return end
 					TweenButton(Toggle.Name, {TextColor3 = Color3.fromRGB(180, 180, 180)}, 0.1)
 					TweenButton(Toggle.Box, {BackgroundColor3 = Color3.fromRGB(50, 50, 50)}, 0.1)
-					TweenButton(Toggle.ImageLabel, {ImageColor3 = Color3.fromRGB(180, 180, 180)}, 0.1)
+					--TweenButton(Toggle.ImageLabel, {ImageColor3 = Color3.fromRGB(180, 180, 180)}, 0.1)
 				end))
 
 				table.insert(data.Connections, Toggle.Frame.MouseLeave:Connect(function()
@@ -557,7 +557,7 @@ function UI:Create(info)
 					if Toggle.boolean  then return end
 					TweenButton(Toggle.Name, {TextColor3 = Color3.fromRGB(131 ,131 , 131)}, 0.1)
 					TweenButton(Toggle.Box, {BackgroundColor3 = Color3.fromRGB(20, 20, 20)}, 0.1)
-					TweenButton(Toggle.ImageLabel, {ImageColor3 = Color3.fromRGB(131, 131, 131)}, 0.1)
+				--	TweenButton(Toggle.ImageLabel, {ImageColor3 = Color3.fromRGB(131, 131, 131)}, 0.1)
 				end))
 
 				table.insert(data.Connections, Userinput.InputBegan:Connect(function(input, gp)
