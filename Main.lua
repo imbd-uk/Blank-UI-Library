@@ -531,7 +531,23 @@ function UI:Create(info)
 				function Toggle:SetCallback(fn)
 					info.Callback = fn
 				end
+				
+				function Toggle:SetValue(val)
+					Toggle.boolean = val
+					
+					if Toggle.boolean then
+						TweenButton(Toggle.Name, {TextColor3 = Color3.fromRGB(255, 255, 255)}, 0.1)
+						TweenButton(Toggle.Box, {BackgroundColor3 = Color3.fromRGB(255, 255, 255)}, 0.1)
+					else
+						TweenButton(Toggle.Name, {TextColor3 = Color3.fromRGB(131, 131, 131)}, 0.1)
 
+						TweenButton(Toggle.Box, {BackgroundColor3 = Color3.fromRGB(20, 20, 20)}, 0.1)
+					end
+					
+				end
+				
+				Toggle:SetValue(info.boolean)
+				
 				table.insert(data.Connections, Toggle.Frame.MouseEnter:Connect(function()
 					Toggle.Hover = true
 					if Toggle.boolean  then return end
