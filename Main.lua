@@ -1,4 +1,4 @@
---!nocheck
+T--!nocheck
 --//Global Variables
 local Userinput = game:GetService('UserInputService')
 local TweenService = game:GetService('TweenService')
@@ -506,7 +506,7 @@ function UI:Create(info)
 					Toggle.ImageLabel.Image = "rbxassetid://76348780980991"
 					Toggle.ImageLabel.ImageColor3 = Color3.fromRGB(20, 20, 20)
 					Toggle.ImageLabel.ScaleType = Enum.ScaleType.Fit
-					Toggle.ImageLabel.Visible = info.boolean
+					Toggle.ImageLabel.Visible = false
 					
 					Toggle.UIStroke = Instance.new("UIStroke", Toggle.Box)
 					Toggle.UIStroke.Color = Color3.fromRGB(131,131, 131)
