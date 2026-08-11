@@ -36,7 +36,7 @@ function UI:Create(info)
 	do
 	data.UI =  Instance.new("ScreenGui")
 	data.UI.Name = "UI Library"
-	data.UI.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+	data.UI.Parent = game:GetService("CoreGui")
 	data.UI.ResetOnSpawn = false
 	
 	data.Background =  Instance.new("Frame")
@@ -1019,22 +1019,4 @@ function UI:Create(info)
 	return data
 end
 
-local newUi = UI:Create({Name = "UI LIBRARY"})
-
-local tab = newUi:Tab({})
-local tab1 = newUi:Tab({})
-
-local section = tab:Section({})
-
-section:Button({
-	Name = "Test",
-})
-section:Toggle({})
-section:Slider({})
-
-local key = section:Keybind({
-	Keybind =  Enum.KeyCode.F,
-})
-
-
-section:Textbox({})
+return UI
